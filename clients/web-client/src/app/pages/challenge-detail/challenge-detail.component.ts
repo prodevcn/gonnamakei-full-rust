@@ -32,12 +32,12 @@ export class ChallengeDetailComponent implements OnInit {
     userId: string;
     statusMessage: string = "";
 
-    // constructor(private modalController: ModalController, private challengeGamePipe: ChallengeGamePipe,
-    //             private gmiWallets: GMIWallets, private challengeService: ChallengeService,
-    //             private route: ActivatedRoute, private participantService: ParticipantService,
-    //             private participantDataService: ParticipantDataService, private dialogs: DialogControllerService,
-    //             private solana: SolanaService) {
-    // }
+    constructor(private modalController: ModalController, private challengeGamePipe: ChallengeGamePipe,
+                private gmiWallets: GMIWallets, private challengeService: ChallengeService,
+                private route: ActivatedRoute, private participantService: ParticipantService,
+                private participantDataService: ParticipantDataService, private dialogs: DialogControllerService,
+                private solana: SolanaService) {
+    }
 
     ngOnInit(): void {
         let data = this.route.snapshot.data.challenge;
