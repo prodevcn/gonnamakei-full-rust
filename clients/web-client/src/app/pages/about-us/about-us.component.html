@@ -11,6 +11,14 @@
 
             <div class="team-section">
                 <div class="title">THE TEAM</div>
+                <div class="team-list">
+                    <div (click)="selectedMember=member"
+                         *ngFor="let member of teamMembers"
+                         [attr.selected]="selectedMember ===  member"
+                         class="team-item cursor-pointer">
+                        <img [src]="member.profilePictureUrl" class="image">
+                    </div>
+                </div>
 
                 <div *ngIf="selectedMember" class="about-container">
                     <div class="about">{{ selectedMember.about }}</div>
