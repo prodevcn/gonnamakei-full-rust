@@ -1,0 +1,189 @@
+.bet-container {
+  position: relative;
+  z-index: 200;
+}
+
+.bg-color {
+  background: #0e0e0e;
+}
+
+.des {
+  color: #dedede;
+  font-family: Titillium Web;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  /* or 175% */
+
+  letter-spacing: 0.03em;
+  line-height: 42px;
+
+  /* Black/Black 100 */
+
+  text-align: center;
+}
+
+.play {
+  background: none;
+  border: none;
+}
+
+.img2 {
+  bottom: -5rem;
+  position: absolute;
+}
+
+.box {
+  background: #1b1b1b;
+  min-height: 100px;
+  position: relative;
+}
+
+.specific-height {
+  height: 0rem;
+}
+
+.center {
+  justify-content: center;
+}
+
+.button {
+  background: linear-gradient(
+                  -18deg, #1b1b1b 50%, transparent 50%);
+}
+
+.postion-s {
+  height: 58rem;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: -300px;
+}
+
+.position-r {
+  position: relative;
+}
+
+.img-index {
+  z-index: 111;
+}
+
+.fucking {
+  color: #f22fb0;
+  /* font-family: Titillium Web; */
+  font-size: 84px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.img3 {
+  left: 180px;
+  position: absolute;
+  position: absolute;
+  top: -268px;
+}
+
+.mobile {
+  display: none;
+}
+
+.f-hand {
+  left: 0;
+  max-width: 673px;
+  position: absolute;
+  top: 30%;
+  width: 45%;
+  z-index: 0;
+}
+
+.hold-container {
+  z-index: 111;
+}
+
+.footer-links {
+  z-index: 100;
+}
+
+.footer-links.notmobile {
+  margin-left: auto;
+  margin-top: 4rem;
+  width: 66%;
+}
+
+@media screen and (max-width: 880px) {
+  .f-hand {
+    width: 52%;
+  }
+}
+
+@media screen and (max-width: 482px) {
+  .f-hand {
+    top: 27%;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sub-heading {
+    left: 9px;
+    position: inherit;
+    top: 26px;
+  }
+  .notmobile {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .fucking {
+    color: #f22fb0;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+  }
+  .des {
+    font-family: Titillium Web;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    /* or 175% */
+
+    line-height: 28px;
+    text-align: center;
+  }
+  .hole {
+    color: #ffffff;
+    font-family: "CHANEY";
+    font-size: 81px;
+    font-style: normal;
+    font-weight: normal;
+    /* or 123% */
+
+    line-height: 100px;
+
+    /* White */
+
+    opacity: 0.2;
+
+    text-align: right;
+    z-index: 1111;
+  }
+  .img2 {
+    position: absolute;
+    top: -17rem;
+    width: 17rem;
+  }
+  .img3 {
+    left: 74px;
+    position: absolute;
+    top: -253px;
+    width: 3rem;
+  }
+  .footerlogo {
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
+  }
+}

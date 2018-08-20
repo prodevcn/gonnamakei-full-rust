@@ -1,0 +1,26 @@
+<div>
+    <div class="root-container">
+
+        <app-header></app-header>
+
+        <div class="main-content">
+            <div class="faqs-container">
+                <div class="faq" [class]="{opened: faq === opened}" *ngFor="let faq of faqs">
+                    <div class="question" (click)="open(faq)">
+                        <div>{{ faq.question }}</div>
+                        <img class="chevron" src="/assets/images/green-chevron.png">
+                    </div>
+                    <div class="answer" *ngIf="faq === opened">{{ faq.answer }}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-background">
+            <img src="/assets/images/backgroundTexture1.png">
+            <div class="b-container">
+                <img class="bottom" src="/assets/images/backgroundTexture4.png">
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

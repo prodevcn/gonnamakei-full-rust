@@ -1,0 +1,44 @@
+<div class="container-fluid pt-4">
+    <!--
+    <div class="bet-container container pt-4 mt-4">
+        <div class="row mt-4 center ">
+            <h1 class="fucking text-center">I BET YOU FUCKING CAN'T </h1>
+        </div>
+        <div class="row">
+            <p class="des mt-4 mb-4  ">
+                In gonnamakeit.app anyone can create challenges. Liquidity providers can lock digital assets in a
+                challenge to earn the challengees’ entry fees. They are betting that no player will win the challenge –
+                prove them wrong!
+
+            </p>
+        </div>
+        <div class="row mt-4 center">
+            <button (click)="waitlistModal.open()" class="play fg mb-4">
+                <img (click)="waitlistModal.open()" alt="" src="/assets/playbtn.svg">
+            </button>
+        </div>
+    </div>
+    -->
+
+    <!-- last part -->
+    <div class="row mt-4 center position-r p-5 last-part">
+        <h5 class="hole mobile">HOLD MY DRINK</h5>
+        <div class="hold-container">
+            <img alt="" class="img-fluid img-index notmobile" src="/assets/hold.svg">
+            <div class="footer-links notmobile">
+                <app-footer-links></app-footer-links>
+            </div>
+        </div>
+        <img alt="" class="img-fluid f-hand img-index" src="/assets/images/fuckoff-hand.png">
+    </div>
+
+    <div class="footer-links mobile">
+        <app-footer-links [isMobile]="true"></app-footer-links>
+    </div>
+    <div class="row specific-height ">
+
+    </div>
+
+</div>
+
+<app-modal #waitlistModal [component]="WaitlistPromptComponent"></app-modal>

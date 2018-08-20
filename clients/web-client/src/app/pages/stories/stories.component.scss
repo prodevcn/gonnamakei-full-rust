@@ -1,0 +1,29 @@
+.root {
+  background: var(--color-3);
+  height: 100%;
+  width: 100%;
+
+  .iframe-container {
+    background: white;
+    height: calc(100% - 109px);
+    width: 100%;
+
+    > iframe {
+      border: none;
+      height: 100%;
+      outline: none;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .root {
+
+    .iframe-container {
+      height: calc(100% - 74px);
+    }
+  }
+
+}

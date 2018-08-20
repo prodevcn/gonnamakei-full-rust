@@ -1,0 +1,228 @@
+.root-container {
+  background: var(--color-3);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  > * {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .bottom-background {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+app-footer {
+  margin-top: auto;
+}
+
+.bottom-background {
+
+  left: 0;
+  top: 0;
+
+  > * {
+    display: block;
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .b-container {
+    bottom: 0;
+    height: initial;
+    height: initial;
+    mix-blend-mode: overlay;
+    top: initial;
+
+    > img {
+      display: block;
+      margin: auto;
+      max-height: 30rem;
+      width: auto;
+    }
+  }
+}
+
+.main-content {
+  margin: 0rem auto;
+  max-width: 77rem;
+  padding: 6rem 2rem;
+
+  > .title {
+    color: var(--color-10);
+    font-family: "CHANEY";
+    font-size: 3.3rem;
+    margin: 1rem auto;
+    text-transform: uppercase;
+  }
+}
+
+.team-section {
+
+  margin: 4rem auto;
+  margin-top: 5rem;
+
+  > .title {
+    color: var(--color-12);
+    font-family: "CHANEY";
+    font-size: 3.3rem;
+    font-weight: bold;
+    margin: 1rem auto;
+    margin: 2rem auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem auto;
+  position: relative;
+
+  > .team-item {
+
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    max-width: 10rem;
+    min-width: 7.5rem;
+    overflow: hidden;
+    width: 16%;
+
+    &[selected="true"] {
+      border: 0.3rem solid var(--color-12);
+      padding: 0.3rem;
+    }
+
+    > .image {
+      border-radius: 100%;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.about-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  > .about {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin: 3rem auto;
+    max-width: 45rem;
+    text-align: center;
+  }
+
+  > .linkedin-link {
+    display: block;
+    width: 2rem;
+
+    > svg-icon {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1240px) {
+
+  .main-content {
+    > .title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .team-section {
+    > .title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .team-list {
+
+    > .team-item {
+      width: 11.5%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .main-content {
+    > .title {
+      font-size: 2.1rem;
+    }
+  }
+
+  .team-section {
+    > .title {
+      font-size: 2.1rem;
+    }
+  }
+
+  .team-list {
+
+    > .team-item {
+      width: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .main-content {
+    padding-bottom: 2.5rem;
+    padding-top: 0rem;
+
+    > .title {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .main-content {
+
+    padding-bottom: 2rem;
+
+    > .title {
+      font-size: 1.75rem;
+    }
+  }
+
+  .team-section {
+    > .title {
+      font-size: 2.1rem;
+    }
+
+    .about-container > .about {
+      margin: 1rem auto;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .team-list {
+
+    > .team-item {
+      width: 10%;
+    }
+  }
+}

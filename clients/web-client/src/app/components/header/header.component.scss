@@ -1,0 +1,418 @@
+.btn-custom {
+  background: none;
+  border: none;
+}
+
+.f-right {
+  float: right;
+}
+
+.right {
+  margin-right: 4rem;
+  margin-top: 1rem;
+}
+
+.challegesbtn {
+  color: #dedede;
+  font-family: Titillium Web;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  /* identical to box height, or 175% */
+
+  letter-spacing: 0.03em;
+
+  /* Black/Black 100 */
+
+  line-height: 28px;
+}
+
+.modal {
+  backdrop-filter: blur(20px);
+  background: rgba(16, 16, 16, 0.3);
+}
+
+.waitlist-modal .main-content-text {
+  justify-content: center;
+
+}
+
+.waitlist-modal .main-content-text > .main-p {
+  min-width: 400px;
+}
+
+.main-model {
+  background: #1b1b1b;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.connectbtn {
+  background: #e1ff28;
+  border: none;
+  color: #1b1b1b;
+  font-family: Titillium Web;
+  font-size: 16px;
+  /* identical to box height, or 175% */
+
+  /* Black/Black 400 */
+
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  padding: 2px 15px;
+}
+
+.main-p {
+  color: #ab9e9e;
+  font-size: 15px;
+  padding: 26px;
+}
+
+.subscribebtn {
+  background: #e1ff28;
+  border: none;
+  color: #0f0f0f;
+  font-family: Titillium Web;
+  font-size: 16px;
+  /* identical to box height, or 175% */
+
+  /* Black/Black 400 */
+
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+
+  padding: 2px 18px;
+}
+
+.subscribe {
+  background: #404142;
+  border: none;
+  color: #1b1b1b;
+  font-family: Titillium Web;
+  font-size: 16px;
+  /* identical to box height, or 175% */
+
+  /* Black/Black 400 */
+
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 85px;
+  padding: 5px 11px 5px 18px;
+}
+
+.connectName {
+  color: #ffffff;
+  font-family: Titillium Web;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  /* identical to box height, or 186% */
+
+  /* White */
+
+  line-height: 26px;
+}
+
+.connectbtn2 {
+  background: #707070;
+  border: none;
+  color: #1b1b1b;
+  font-family: Titillium Web;
+  font-size: 16px;
+  /* identical to box height, or 175% */
+
+  /* Black/Black 400 */
+
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  padding: 2px 15px;
+}
+
+.connectName {
+  color: #ffffff;
+  font-family: Titillium Web;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  /* identical to box height, or 186% */
+
+  /* White */
+
+  line-height: 26px;
+}
+
+.main-h {
+  color: #ffffff;
+  font-family: Titillium Web;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  /* identical to box height, or 150% */
+
+  line-height: 48px;
+}
+
+.sub-h {
+  color: #707070;
+  font-family: Titillium Web;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  /* identical to box height, or 175% */
+
+  /* Black/Black 200 */
+
+  line-height: 28px;
+}
+
+.icon-img {
+  border-radius: 50%;
+  height: 20px;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.f-right {
+  float: right;
+}
+
+.row-border {
+  border-bottom: 1px solid #2e2e2e;
+
+}
+
+.btn-s {
+  background: transparent;
+  border: none;
+  padding-right: 30px;
+}
+
+.center {
+  justify-content: center;
+}
+
+.address {
+  color: #ffffff;
+  font-family: Titillium Web;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  /* identical to box height, or 175% */
+
+  /* White */
+
+  line-height: 28px;
+}
+
+.location {
+  color: #dedede;
+  font-family: Titillium Web;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  /* identical to box height, or 175% */
+
+  letter-spacing: 0.03em;
+  line-height: 28px;
+  /* Black/Black 100 */
+
+  overflow: hidden;
+}
+
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.slider {
+  background-color: #e1ff28;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #1b1b1b;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #e1ff28;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #e1ff28;
+
+}
+
+input:checked + .slider:before {
+  -ms-transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.end {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.bg-w {
+  color: white;
+}
+
+.c-btn {
+  background: #ffffff;
+  border-radius: 2px;
+  font-family: Titillium Web;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  line-height: 28px;
+  opacity: 0.5;
+  /* identical to box height, or 175% */
+
+  padding: 10px 20px;
+
+  /* Brand/Green Punkie */
+
+}
+
+.c-s {
+  color: #28ff7e;
+}
+
+.mobile-btn {
+  display: none
+}
+
+.extra-vh {
+  height: 100vh;
+}
+
+.cross-btn {
+  background: transparent;
+  border: none;
+  float: right;
+}
+
+.end {
+  justify-content: end;
+}
+
+.home-btn {
+  color: white;
+  font-family: Titillium Web;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  justify-content: center;
+}
+
+.action-container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+
+  .link-btn {
+    margin-right: 1.75rem;
+  }
+}
+
+.wallet-btn {
+  align-items: center;
+  background: rgb(255 255 255 / 20%);
+  border-radius: 0.3rem;
+  display: flex;
+  padding: 0.75rem 1rem;
+  white-space: pre;
+
+  > .title {
+    color: #28ff7e;
+    margin-right: 1rem;
+  }
+
+  > .image {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .notmobile {
+    display: none
+  }
+
+  .mobile-btn {
+    background: transparent;
+    border: none;
+    display: block;
+    float: right;
+  }
+
+  .main-p {
+    margin-bottom: 70px;
+  }
+
+  .subscribe {
+    margin-bottom: 27px;
+    padding: 5px 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .waitlist-modal .main-content-text > .main-p {
+    font-size: 0.9rem
+  }
+}
+
+.header-row {
+  align-items: center;
+}
+
+.logo {
+  min-width: 150px;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .action-container {
+    .link-btn {
+      margin-right: 1rem;
+    }
+  }
+}

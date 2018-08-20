@@ -1,0 +1,43 @@
+[package]
+name = "commons"
+version = "0.1.0"
+authors = ["Julio Treviño Páez <julio.tpaez@gmail.com>"]
+edition = "2018"
+
+[features]
+test = ["libflate"]
+
+[dependencies]
+anchor-client = "0.18.0"
+anchor-spl = "0.18.0"
+arangors = { version = "0.5.0", features = ["arango3_7"] }
+arcstr = { version = "1.1.1", features = ["serde", "substr-usize-indices"] }
+async-trait = "0.1.51"
+bitstream-io = "1.2.0"
+chrono = { version = "0.4.19", features = ["serde"] }
+data-encoding = "2.3.2"
+db-model-macro = { path = "../libs/db-model-macro" }
+enum-derive = { path = "../libs/enum-derive" }
+futures = "0.3.17"
+lazy_static = "1.4.0"
+libflate = { version = "1.1.1", optional = true }
+log = "0.4.14"
+nanoid = "0.4.0"
+pretty_env_logger = "0.4.0"
+rand = "0.8.4"
+regex = "1.5.4"
+reqwest = { version = "0.11.6", features = ["json"] }
+ring = "0.16.20"
+rust_decimal = { version = "1.17.0", features = ["serde-float", "serde-arbitrary-precision"] }
+serde = { version = "1.0.130", features = ["derive", "rc"] }
+serde_json = "1.0.68"
+serde_repr = "0.1.7"
+solana-sdk = "1.8.2"
+tindercrypt = "0.3.2"
+tokio = { version = "1.13.0", features = ["rt-multi-thread", "macros", "sync"] }
+toml = "0.5.8"
+uclient = "0.1.1"
+warp = { version = "0.3.1", features = ["compression"] }
+gmi_bet = { path = "../../solana-programs/programs/bet" }
+gmi_investment = { path = "../../solana-programs/programs/investment" }
+gmi_challenge = { path = "../../solana-programs/programs/challenge" }

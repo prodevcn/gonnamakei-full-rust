@@ -1,0 +1,1 @@
+export type  APIReference<T> = { id: string } & T;

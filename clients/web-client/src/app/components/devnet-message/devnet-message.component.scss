@@ -1,0 +1,11 @@
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color: #9f6000;
+  background-color: #feefb3;
+
+  & > b {
+    color: inherit;
+  }
+}

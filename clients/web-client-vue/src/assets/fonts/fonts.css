@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'CHANEY';
+    src: url('/assets/fonts/CHANEY-Regular.otf') format('opentype')
+}
+
+@font-face {
+    font-family: 'CHANEY-Extended';
+    src: url('/assets/fonts/CHANEY-Extended.otf') format('opentype')
+}
+
+@font-face {
+    font-family: 'CHANEY-UltraExtended';
+    src: url('/assets/fonts/CHANEY-UltraExtended.otf') format('opentype')
+}
+
+@font-face {
+    font-family: 'CHANEY-Wide';
+    src: url('/assets/fonts/CHANEY-Wide.otf') format('opentype')
+}

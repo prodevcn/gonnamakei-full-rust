@@ -1,0 +1,29 @@
+<div class="root-container">
+
+    <img (click)="closeModal.emit()" class="close-icon" src="/assets/icons/close.svg">
+
+    <div class="avatar-container">
+        <img [src]="challenge.nftImageUrl" class="avatar"/>
+        <div class="mobile admission-feed-container">
+            <div class="title">Admission Fees</div>
+            <div class="subtitle">{{ blockchainInfo.maxBetAmount | solAmount }}</div>
+            <div class="cost-detail">+ transaction fees</div>
+        </div>
+    </div>
+    <div class="right-content-container">
+        <div class="description">{{ challenge.description }}</div>
+        <div class="details-container">
+            <div class="user-id-container">
+                <div class="title">Clash Royale user tag</div>
+                <div class="subtitle">{{ userId }}</div>
+            </div>
+            <div class="notmobile admission-feed-container">
+                <div class="title">Admission Fees</div>
+                <div class="subtitle">{{ blockchainInfo.maxBetAmount | solAmount }}</div>
+                <div class="cost-detail">+ transaction fees</div>
+            </div>
+        </div>
+        <button (click)="letsGo()" class="button">Let's GO</button>
+    </div>
+
+</div>

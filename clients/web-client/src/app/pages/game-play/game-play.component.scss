@@ -1,0 +1,147 @@
+.root {
+  align-items: center;
+  background: var(--color-3);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+
+  > * {
+    width: 100%;
+  }
+}
+
+app-footer {
+  margin-top: auto;
+}
+
+.main-content {
+  align-items: center;
+  display: flex;
+  flex-wrap: center;
+  justify-content: space-around;
+  margin-top: 6rem;
+  max-width: 90rem;
+
+  padding: 0 1rem;
+  width: calc(100% - 2rem);
+}
+
+.game-content-container {
+  backdrop-filter: blur(40px);
+  background: var(--color-1);
+  border-radius: 0.2rem;
+  max-width: 30rem;
+  padding: 3rem;
+
+  > .image {
+    height: auto;
+    width: 10rem;
+  }
+
+  > .description {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    opacity: 0.8;
+  }
+}
+
+.game-progress-container {
+  max-width: 40rem;
+  padding: 3rem;
+}
+
+.progress-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  > .title {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+
+  > .description {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem auto;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  > .button {
+    margin: 1rem auto;
+    padding: 0.75rem 6rem;
+    white-space: pre;
+  }
+}
+
+.progress-container > * {
+  margin-bottom: 1rem;
+}
+
+.progress-container.timer {
+
+  .description {
+    color: white;
+  }
+
+}
+
+.progress-container.lost-result {
+
+  .title {
+    color: var(--color-10);
+  }
+
+  .description {
+    color: white;
+  }
+
+}
+
+.progress-container.checking {
+
+  .title {
+    color: var(--color-7);
+
+  }
+
+  .description {
+    color: var(--color-4);
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  .game-content-container {
+    max-width: 45%;
+    padding: 2rem 1.5rem;
+  }
+
+  .progress-container {
+    .description {
+      font-size: 1.25rem;
+    }
+  }
+
+}
+
+@media screen and (max-width: 747px) {
+  .main-content {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .game-content-container {
+    margin-bottom: 3rem;
+    max-width: calc(100% - 1rem);
+  }
+
+  .progress-container {
+    max-width: calc(100% - 1rem);
+  }
+
+}

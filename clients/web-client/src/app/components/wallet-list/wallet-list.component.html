@@ -1,0 +1,31 @@
+<div class="root-container">
+
+    <button (click)="close()" aria-label="Close" class="close" type="button">
+        <img src="/assets/icons/close.svg"/>
+    </button>
+
+    <div class="title">Connect Wallet</div>
+
+    <div *ngIf="installedWallets.length > 0" class="section">
+        <div class="subtitle">Installed wallets</div>
+        <div *ngFor="let wallet of installedWallets" class="wallet-item">
+            <img [src]="wallet.icon | safeUrl" class="image"/>
+            <div class="name">{{ wallet.name }}</div>
+            <button (click)="connectWallet(wallet)" [attr.waiting]="isConnecting" class="button">
+                Connect
+            </button>
+        </div>
+    </div>
+
+    <div *ngIf="availableWallets.length > 0" class="section">
+        <div class="subtitle">Available wallets</div>
+        <div *ngFor="let wallet of availableWallets" class="wallet-item">
+            <img [src]="wallet.icon |  safeUrl" class="image"/>
+            <div class="name">{{ wallet.name }}</div>
+            <a [href]="wallet.url" class="link" target="_blank">
+                <img src="/assets/icons/link.svg"/>
+            </a>
+        </div>
+    </div>
+
+</div>

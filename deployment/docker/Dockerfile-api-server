@@ -1,0 +1,17 @@
+FROM yasuyuky/rust-ssl-static@sha256:3df2c8949e910452ee09a5bcb121fada9790251f4208c6fd97bb09d20542f188 as ssl
+
+# Define image.
+FROM debian:buster-slim
+RUN apt-get update && apt-get install -y ca-certificates libssl-dev && rm -rf /var/lib/apt/lists/*
+
+# Copy bin.
+COPY gonnamakeit-app/target/release/api-server /usr/local/bin/app
+COPY --from=ssl /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+
+# Copy config.
+WORKDIR /usr/src/gmi/
+ENV CONFIG_PATH=/usr/src/gmi/config.toml
+ENV SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+ENV SSL_CERT_DIR=/etc/ssl/certs
+
+CMD ["app"]

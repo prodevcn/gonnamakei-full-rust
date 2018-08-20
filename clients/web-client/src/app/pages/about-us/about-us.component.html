@@ -1,0 +1,45 @@
+<div>
+    <div class="root-container">
+
+        <app-header></app-header>
+
+        <div class="main-content">
+
+            <div class="title">Handy Game project to showcase how people can leverage gonnamakeit to build open macro
+                strategy games.
+            </div>
+
+            <div class="team-section">
+                <div class="title">THE TEAM</div>
+                <div class="team-list">
+                    <div (click)="selectedMember=member"
+                         *ngFor="let member of teamMembers"
+                         [attr.selected]="selectedMember ===  member"
+                         class="team-item cursor-pointer">
+                        <img [src]="member.profilePictureUrl" class="image">
+                    </div>
+                </div>
+
+                <div *ngIf="selectedMember" class="about-container">
+                    <div class="about">{{ selectedMember.about }}</div>
+                    <a *ngIf="selectedMember.linkedinUrl"
+                       [href]="selectedMember.linkedinUrl"
+                       class="linkedin-link cursor-pointer"
+                       target="_blank">
+                        <svg-icon src="/assets/icons/linkedin.svg"></svg-icon>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bottom-background">
+            <img src="/assets/images/backgroundTexture1.png">
+            <div class="b-container">
+                <img class="bottom" src="/assets/images/backgroundTexture2.png">
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

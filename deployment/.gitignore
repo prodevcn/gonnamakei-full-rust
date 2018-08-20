@@ -1,0 +1,6 @@
+gmi-*.gz
+config.prod.toml
+docker/.env.prod
+docker/.env.dev
+upload_to_server.sh
+upload_to_server_dev.sh

@@ -1,0 +1,23 @@
+<div class="root-container">
+
+    <app-header></app-header>
+
+    <div class="top-background">
+        <img src="/assets/images/background2.svg">
+    </div>
+
+    <div class="main-content">
+        <div class="main-title-container">
+            <div class="title">Challenges</div>
+            <div class="subtitle">Ready to win? 🔥</div>
+        </div>
+
+        <div class="challenge-list">
+            <div *ngFor="let challenge of challenges; let i = index" class="challenge-container">
+                <app-challenge [activeBtn]="true" [challenge]="challenge"></app-challenge>
+            </div>
+        </div>
+
+    </div>
+    <app-home-footer></app-home-footer>
+</div>

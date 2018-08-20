@@ -1,0 +1,32 @@
+<div class="root">
+    <div class="avatar-container">
+        <img *ngFor="let imageUrl of imageCollection;let i = index"
+             [ngStyle]="{left: i*2 + 'rem'}"
+             [src]="imageUrl"
+             class="avatar"/>
+    </div>
+    <div class="container">
+        <div class="top-part">
+            <div class="main-content">
+                <div class="challenge-avatar-container">
+                    <img [src]="challenge | challengeGame | gameImageUrl" class="challenge-avatar"/>
+                    <div class="challenge-title-container">
+                        <div class="challenge-title">{{ challenge.name }}</div>
+                        <div class="challenge-date">{{ challenge.createdAt | date: 'YYYY/MM/dd' }}</div>
+                    </div>
+                </div>
+                <div class="challenge-description">
+                    {{ challenge.description }}
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-part">
+            <button (click)="waitlistModal.open()" class="button icon-button">
+                Coming soon 🤙🏽
+            </button>
+        </div>
+    </div>
+    <app-modal #waitlistModal [component]="WaitlistPromptComponent"></app-modal>
+
+</div>

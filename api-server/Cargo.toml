@@ -1,0 +1,24 @@
+[package]
+name = "api-server"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+arcstr = { version = "1.1.1", features = ["serde", "substr-usize-indices"] }
+bincode = "1.3.3"
+chrono = { version = "0.4.19", features = ["serde"] }
+commons = { path = "../commons" }
+lazy_static = "1.4.0"
+log = "0.4.14"
+rand = "0.8.4"
+reqwest = { version = "0.11.6", features = ["json"] }
+serde = { version = "1.0.130", features = ["derive", "rc"] }
+serde_json = "1.0.68"
+spl-token = "3.2.0"
+tokio = { version = "1.13.0", features = ["rt-multi-thread", "macros", "sync"] }
+warp = { version = "0.3.1", features = ["compression"] }
+
+[dev-dependencies]
+commons = { path = "../commons", features = ["test"] }
+futures = "0.3.17"
+tokio = { version = "1.13.0", features = ["rt-multi-thread", "macros", "sync", "time"] }

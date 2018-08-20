@@ -1,0 +1,11 @@
+<div class="root-container">
+
+    <button (click)="closeModal.next()" *ngIf="showClose" aria-label="Close" class="close" type="button">
+        <img src="/assets/icons/close.svg"/>
+    </button>
+
+    <div class="title">{{ title }}</div>
+
+    <div class="description">{{ message }}</div>
+
+</div>

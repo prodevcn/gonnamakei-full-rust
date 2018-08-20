@@ -1,0 +1,45 @@
+{
+  "name": "web-client",
+  "version": "0.0.1",
+  "description": "The web client of the GMI platform",
+  "productName": "GMI Web Client",
+  "author": "Julio Treviño Páez <julio.tpaez@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.11.0",
+    "@solana/wallet-adapter-base": "^0.6.0",
+    "@solana/wallet-adapter-wallets": "^0.10.0",
+    "@solana/web3.js": "^1.27.0",
+    "axios": "^0.21.4",
+    "core-js": "^3.17.3",
+    "quasar": "^2.1.0",
+    "vue-i18n": "^9.1.7"
+  },
+  "devDependencies": {
+    "@intlify/vue-i18n-loader": "^3.0.0",
+    "@quasar/app": "^3.1.0",
+    "@types/node": "^15.14.9",
+    "dotenv": "^10.0.0",
+    "node-polyfill-webpack-plugin": "^1.1.4"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 12.22.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

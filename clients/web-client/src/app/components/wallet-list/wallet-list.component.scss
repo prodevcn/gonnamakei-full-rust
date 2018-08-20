@@ -1,0 +1,50 @@
+.root-container {
+  padding: 1rem 2rem;
+  position: relative;
+
+  > .title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+
+.section {
+  margin-bottom: 2rem;
+
+  > .subtitle {
+    color: #707070;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.wallet-item {
+  align-items: center;
+  border-bottom: 1px solid rgb(46 46 46 / 80%);
+  display: flex;
+  padding: 1rem 0rem;
+
+  > .image {
+    height: 2rem;
+    margin-right: 0.75rem;
+    width: auto;
+  }
+
+  > .name {
+    color: white;
+    flex-grow: 1;
+  }
+
+  > .button {
+    margin-left: auto;
+    padding: 0.3rem 1rem;
+    white-space: pre;
+
+    &[waiting="true"] {
+      background: #707070;
+      color: var(--color-3);
+    }
+  }
+}

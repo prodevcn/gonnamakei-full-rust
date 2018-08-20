@@ -1,0 +1,141 @@
+
+.container {
+  background: var(--color-1);
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 300px;
+  overflow: visible;
+  padding: 2rem;
+  padding-left: 0;
+
+  > .top-part {
+    display: flex;
+    margin-bottom: 1rem;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+
+    > .avatar-container {
+      max-height: 100px;
+      max-width: 100px;
+      transform: translateX(-17%) translateY(-40%) rotateZ(-15deg);
+    }
+  }
+}
+
+.challenge-avatar-container {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.challenge-avatar {
+  border-radius: 100%;
+  height: 3.5rem;
+  margin-right: 1.2rem;
+  width: auto;
+}
+
+.challenge-title-container {
+
+  > .challenge-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  > .challenge-date {
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+    opacity: 0.8;
+  }
+}
+
+.challenge-description {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.main-content {
+}
+
+.bottom-part {
+  align-items: center;
+  display: flex;
+  margin-top: auto;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  width: 100%;
+
+  > .user-icon {
+    height: auto;
+    margin-right: 0.5rem;
+    width: 1.75rem;
+  }
+
+  > .user-count {
+    color: var(--color-5);
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+
+  > .button {
+    margin-left: auto;
+    padding: 0.75rem 1.5rem;
+    white-space: pre;
+  }
+
+  > .button[active-btn-variant="true"] {
+    background: var(--color-12);
+    padding-left: 2.7rem;
+    padding-right: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .container {
+    padding: 1.5rem 1rem;
+    padding-left: 1rem;
+
+    > .top-part > .avatar-container {
+      position: absolute;
+      right: -3rem;
+      top: 0rem;
+      width: 6rem;
+    }
+  }
+
+  .bottom-part {
+    padding-left: 0rem;
+  }
+
+  .challenge-avatar-container {
+    width: calc(100% - 3rem);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+
+    > .top-part > .avatar-container {
+      position: absolute;
+    }
+  }
+
+  .challenge-avatar-container {
+    width: calc(100% - 5rem);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+
+    > .top-part > .avatar-container {
+      position: absolute;
+      right: -2.25rem;
+    }
+  }
+}
+
+

@@ -1,0 +1,39 @@
+appName = "Gonna Make It"
+publicUrl = "gonnamakeit.app"
+publicShortUrl = "gonnamakeit.app"
+version = "0.1.0"
+
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+
+[database]
+url = "http://localhost:8529"
+username = "root"
+password = "gmi"
+secret = [
+    # This value was generated from a secure PRNG.
+    0xd6, 0x26, 0x98, 0xda, 0xf4, 0xdc, 0x50, 0x52,
+    0x24, 0xf2, 0x27, 0xd1, 0xfe, 0x39, 0x01, 0x8a
+]
+salt = [
+    # This value was generated from a secure PRNG.
+    0xd6, 0x26, 0x98, 0xda, 0xf4, 0xdc, 0x50, 0x52,
+    0x24, 0xf2, 0x27, 0xd1, 0xfe, 0x39, 0x01, 0x8a
+]
+configurationId = "gid__configuration_object"
+
+[gameApis]
+[gameApis.clashRoyale]
+token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6Ijk0ZGY5N2NhLTEwNDktNGEzZS1hNzQ3LTI3ZTE2MDg5M2M5YiIsImlhdCI6MTYzNDg1MzAxOSwic3ViIjoiZGV2ZWxvcGVyL2MwYjNlZTAwLWQxOTgtOWNjYi1mNjRmLTBlNDkyNDkzMjFlMCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIyLjE1NS40OC4yNDkiXSwidHlwZSI6ImNsaWVudCJ9XX0.nHvjQxiz7xZRVmlxbZ-the7woDcSHojKCCYICIlqw7Yir1pTM7tUupORM2QptHSWCrlkLdoCWXmhrGSKJnVPZQ"
+url = "https://api.clashroyale.com/v1"
+
+[solana]
+clusterUrl = "http://localhost:8899"
+
+[wallet]
+# same as app-keypair.json
+keypair = [0, 105, 153, 112, 38, 133, 19, 179, 233, 147, 116, 137, 235, 164, 74, 203, 251, 181, 218, 180, 206, 185, 254, 51, 193, 91, 114, 196, 155, 33, 115, 21, 66, 144, 66, 61, 210, 3, 50, 161, 1, 172, 207, 153, 235, 185, 234, 153, 152, 26, 12, 129, 171, 137, 157, 241, 72, 154, 187, 164, 2, 247, 204, 112]
+
+[backend]
+handyGameToken = "gitti3IP9wtsrVr83qtSHSq-KjaVBjlh34rpUicTBwnHz3l-43I7iMvOzRMhFI1nLOQLurkMIj4Ohm9SzqFKrybn4J37nl9MKBBRvxSgzB5fVWbOn2EO6LnobAeqa3vp0pFDFtJ0BNs0uaNsoqGXtnDCTYkw9nJInsJENtoUq6k98YlvIo4OqFoMKgURvKBspWPg9ZymuCXKOMdPvAQksGgNy9Z0P65oqWsHN7dh-b_RGEJPXHZ_uXDNWD0V3J"

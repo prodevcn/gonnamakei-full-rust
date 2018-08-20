@@ -1,0 +1,66 @@
+.close-container {
+  display: flex;
+  justify-content: flex-end !important;
+  margin-left: auto;
+}
+
+.btn-custom {
+  background: none;
+  border: none;
+}
+
+.f-right {
+  float: right;
+}
+
+.center {
+  justify-content: center;
+}
+
+.end {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.extra-vh {
+  height: 100vh;
+}
+
+.cross-btn {
+  background: transparent;
+  border: none;
+  float: right;
+}
+
+.end {
+  justify-content: end;
+}
+
+.home-btn {
+  color: white;
+  font-family: Titillium Web;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  justify-content: center;
+}
+
+.wallet-btn {
+  align-items: center;
+  background: rgb(255 255 255 / 20%);
+  border-radius: 0.3rem;
+  display: flex;
+  padding: 0.75rem 1rem;
+  white-space: pre;
+
+  > .title {
+    color: #28ff7e;
+    margin-right: 1rem;
+  }
+
+  > .image {
+    height: 2rem;
+    width: auto;
+  }
+}

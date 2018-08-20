@@ -1,0 +1,78 @@
+<div class="root">
+    <app-header></app-header>
+
+    <div class="main-content">
+
+        <div class="top-container">
+
+            <div class="section foe-section">
+                <div class="foe-content">
+                    <img [src]="challenge.nftImageUrl" class="image"/>
+                    <div class="name">Admission fee</div>
+                    <div class="amount">{{ blockchainInfo.maxBetAmount | solAmount }}</div>
+                </div>
+                <div class="section-text-content challenge-content">
+                    <div class="title">Challenge</div>
+                    <div class="description">{{ challenge.description }}</div>
+                </div>
+            </div>
+
+            <div class="section howtoplay-section notmobile">
+                <div class="section-text-content howtoplay-content">
+                    <div class="title">How to play</div>
+                    <div class="description">Play in Battle mode, if you play in party mode it will not work</div>
+                </div>
+                <div class="image-container">
+                    <img class="image" src="/assets/images/howToPlay2.svg"/>
+                </div>
+            </div>
+
+            <div class="section howtoplay-section">
+                <div class="image-container notmobile">
+                    <img class="image" src="/assets/images/howToPlay1.svg"/>
+                </div>
+                <div class="section-text-content howtoplay-content">
+                    <div class="title">How to play</div>
+                    <div class="description">Enter your game ID, we will automatically check your last results, in case
+                        you are a winner you will get it, it's that simple OMG
+                    </div>
+                    <img class="image" src="/assets/images/howToPlay1.svg"/>
+                    <form #form="ngForm" (submit)="onUserIdSubmit(form)" class="user-input-container" ngNativeValidate>
+                        <div class="input-container">
+                            <div class="prefix">#</div>
+                            <input [(ngModel)]="userId"
+                                   [required]="true"
+                                   class="input input-text"
+                                   maxlength="15"
+                                   minlength="8"
+                                   name="userId"
+                                   pattern="^[0-9A-Z]+$"
+                                   placeholder="Clash Royale user tag"/>
+                        </div>
+                        <button class="button" type="submit">{{ statusMessage || "Play" }}</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="challenge-list-container">
+            <div class="title text-center">
+                OTHER CHALLENGES
+            </div>
+            <div class="challenge-list">
+                <div *ngFor="let otherChallenge of otherChallenges" class="challenge-container">
+                    <app-challenge [challenge]="otherChallenge"></app-challenge>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-footer></app-footer>
+
+    <app-modal #prePlayModal
+               [componentProps]="{userId: userId, challenge: challenge}"
+               [component]="GamePreplayComponent"
+               [modalProps]="{maxWidth:'750px'}"></app-modal>
+
+</div>

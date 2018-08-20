@@ -1,0 +1,46 @@
+<div class="root-container">
+
+    <button (click)="close()" aria-label="Close" class="close" type="button">
+        <img src="/assets/icons/close.svg"/>
+    </button>
+
+    <div class="text-center">
+        <div class="connected-image-container">
+            <img class="image1" src="/assets/icons/eclipse.svg">
+            <div class="image2-container"><img class="image2" src="/assets/icons/hand-connected.svg"></div>
+        </div>
+    </div>
+
+    <div class="title">Wallet Connected</div>
+
+    <div class="section">
+        <div class="wallet-item">
+            <img [src]="wallet.icon | safeUrl" class="image"/>
+            <div class="name">{{ wallet.name }}</div>
+            <button (click)="disconnectWallet(wallet)" class="button">
+                Disconnect
+            </button>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="list-item">
+            <div class="title">Address</div>
+            <div class="description address">{{ wallet.address }}</div>
+        </div>
+
+        <div class="list-item-container">
+            <div class="list-item">
+                <div class="title">Save as preferred wallet</div>
+                <div class="description">Allows to auto connect to the wallet</div>
+            </div>
+
+            <div (click)="togglePreferredWallet()"
+                 [attr.is-preferred]="isPreferredWallet"
+                 class="check-btn cursor-pointer">
+                <div class="check-circle"></div>
+            </div>
+        </div>
+    </div>
+
+</div>

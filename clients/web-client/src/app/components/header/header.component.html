@@ -1,0 +1,66 @@
+<div class="container-fluid p-4">
+    <div class="row header-row">
+        <div class="col-3">
+            <img class="logo img-fluid cursor-pointer" routerLink="/" src="/assets/brandlogo.svg">
+        </div>
+        <div class="col-9 action-container">
+
+            <button (click)="linkHome && utils.scrollToHomeChallenges()"
+                    [routerLink]="[linkHome ? '/' : '/challenges' ]"
+                    class="btn-custom cursor-pointer notmobile challegesbtn link-btn"
+                    routerLinkActive="router-link-active">
+                Challenges
+            </button>
+
+            <button class="btn-custom cursor-pointer notmobile challegesbtn link-btn"
+                    routerLink="/the-proyect"
+                    routerLinkActive="router-link-active">
+                The project
+            </button>
+
+            <button class="btn-custom cursor-pointer notmobile challegesbtn link-btn"
+                    routerLink="/about-us"
+                    routerLinkActive="router-link-active">
+                About Us
+            </button>
+
+            <button class="btn-custom cursor-pointer notmobile challegesbtn link-btn"
+                    routerLink="/blog"
+                    routerLinkActive="router-link-active">
+                Blog
+            </button>
+
+            <button class="btn-custom cursor-pointer notmobile challegesbtn link-btn"
+                    routerLink="/faqs"
+                    routerLinkActive="router-link-active">
+                FAQs
+            </button>
+
+            <button (click)="walletList.open()"
+                    *ngIf="!gmiWallets.connectedWallet"
+                    class="btn-custom cursor-pointer notmobile f-right">
+                <img src="/assets/images/header-play-button.svg"/>
+            </button>
+
+            <button (click)="walletDetail.open()"
+                    *ngIf="gmiWallets.connectedWallet"
+                    class="wallet-btn btn-custom cursor-pointer notmobile f-right">
+                <div class="title">Connected at</div>
+                <img [src]="gmiWallets.connectedWallet.icon | safeUrl" class="image">
+            </button>
+
+            <!-- mobile  -->
+            <button (click)="mobileMenuModal.open()" class="mobile-btn cursor-pointer">
+                <img src="/assets/icons/mobile-menu.svg">
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<app-modal #walletDetail
+           [componentProps]="{wallet: gmiWallets.connectedWallet}"
+           [component]="WalletDetailComponent"></app-modal>
+<app-modal #walletList [componentProps]="{showDetailOnConnect:true}" [component]="WalletListComponent"></app-modal>
+<app-modal #waitlistModal [component]="WaitlistPromptComponent"></app-modal>
+<app-modal #mobileMenuModal [componentProps]="{linkHome:linkHome}" [component]="MobileMenuComponent"></app-modal>

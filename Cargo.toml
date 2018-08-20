@@ -1,0 +1,6 @@
+[workspace]
+members = ["libs/enum-derive", "libs/db-model-macro", "commons", "api-server", "scripts"]
+
+[profile.test]
+# Faster tests save much more than the increase in compilation time
+opt-level = 3

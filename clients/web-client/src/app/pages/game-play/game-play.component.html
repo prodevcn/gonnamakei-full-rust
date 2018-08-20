@@ -1,0 +1,42 @@
+<div class="root">
+    <app-header></app-header>
+
+    <div class="main-content">
+        <div class="game-content-container">
+            <img [src]="challenge.nftImageUrl" class="image"/>
+            <div class="description">{{ challenge.description }}</div>
+        </div>
+
+        <div class="game-progress-container">
+            <div *ngIf="gameState === 'playing'" class="progress-container timer">
+                <div class="timer-container">
+                    <app-game-timer (onTimeout)="timeout()"
+                                    [startDateTime]="betSendResponse.startTime"
+                                    [totalTime]="(betSendResponse.timeout - betSendResponse.startTime)"></app-game-timer>
+                </div>
+                <div class="description">
+                    You have {{ (betSendResponse.timeout - betSendResponse.startTime) | timeLeftFormat : true }} to play
+                    your game, as soon as you have finished it press verify to check the result.
+                </div>
+                <button (click)="checkResult()" class="button">Check</button>
+            </div>
+
+            <div *ngIf="gameState === 'lost'" class="progress-container lost-result">
+                <div class="title">ouch 😓</div>
+                <div class="description">
+                    You lost, do you want to play again?
+                </div>
+                <button (click)="playAgain()" class="button">Play again</button>
+            </div>
+
+            <div *ngIf="gameState === 'checking'" class="progress-container checking">
+                <div class="title">Checking...</div>
+                <div class="description">
+                    This process can take up to 2 minutes
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-footer></app-footer>
+</div>

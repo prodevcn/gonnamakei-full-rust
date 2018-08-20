@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="top-part">
+        <div class="avatar-container">
+            <img [src]="challenge.nftImageUrl" class="avatar"/>
+        </div>
+        <div class="main-content">
+            <div class="challenge-avatar-container">
+                <img [src]="challenge | challengeGame | gameImageUrl" class="challenge-avatar"/>
+                <div class="challenge-title-container">
+                    <div class="challenge-title">{{ challenge.name }}</div>
+                    <div class="challenge-date">{{ challenge.createdAt | date: 'YYYY/MM/dd' }}</div>
+                </div>
+            </div>
+            <div class="challenge-description">
+                {{ challenge.description }}
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-part">
+        <img class="user-icon" src="/assets/icons/small-user.svg"/>
+        <div class="user-count">{{ challenge.blockchainInfo.historyBets }} Gamers</div>
+        <button [attr.active-btn-variant]="activeBtn"
+                [routerLink]="isAvailable ? ['/challenge', challenge.id] : undefined"
+                class="button icon-button">
+            {{ isAvailable ? 'Play' : 'Coming soon 🤙🏽' }}
+        </button>
+    </div>
+
+    <app-modal #waitlistModal [component]="WaitlistPromptComponent"></app-modal>
+
+</div>

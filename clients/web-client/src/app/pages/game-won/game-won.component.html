@@ -1,0 +1,39 @@
+<div class="main-content">
+
+    <div class="win-container">
+        <svg-icon (click)="onClose()"
+                  [routerLink]="['/challenge', challenge.id]"
+                  [svgStyle]="svgStyle"
+                  class="close-icon"
+                  src="/assets/icons/close.svg"></svg-icon>
+        <div class="details-container">
+            <div class="title">
+                You<br>
+                are the<br>
+                master
+            </div>
+            <div class="description">You've won! it's all yours, in your wallet!</div>
+        </div>
+        <div class="image-container">
+            <img class="win-image" src="/assets/images/hand-win.svg"/>
+        </div>
+    </div>
+
+    <div class="share-container">
+        <div class="title">Share</div>
+
+        <a [href]="socialLinks.discord" class="social-link cursor-pointer" target="_blank">
+            <svg-icon [svgStyle]="svgLinkStyle" src="/assets/icons/discord.svg"></svg-icon>
+        </a>
+
+        <a [href]="socialLinks.twitter" class="social-link cursor-pointer" target="_blank">
+            <svg-icon [svgStyle]="svgLinkStyle" src="/assets/icons/twitter.svg"></svg-icon>
+        </a>
+
+        <a [href]="socialLinks.instagram" class="social-link cursor-pointer" target="_blank">
+            <svg-icon [svgStyle]="svgLinkStyle" src="/assets/icons/instagram.svg"></svg-icon>
+        </a>
+
+    </div>
+
+</div>

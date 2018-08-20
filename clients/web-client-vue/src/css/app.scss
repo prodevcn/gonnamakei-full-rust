@@ -1,0 +1,146 @@
+@import "quasar.variables";
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('~assets/fonts/TitilliumWeb-Black.ttf');
+}
+$color-1: #2e2e2e;
+$color-2: #101010;
+$color-3: #1b1b1b;
+$color-4: #dedede;
+$color-5: #9e9e9e;
+$color-6: #b9b9b9;
+$color-7: #e1ff28;
+$color-8: #f22fb0;
+$color-9: #93ab01;
+$color-10: #28f2ff;
+$color-11: #c4c4c4;
+html,
+body {
+  font-family: Titillium Web;
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: $gmi-dark !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+#q-app {
+  height: 100%;
+}
+
+/* LAYOUT ------------------------------------------------------------------ */
+
+.sticky-position {
+  position: sticky;
+}
+
+.max-viewport-width {
+  max-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LINKS ------------------------------------------------------------------- */
+
+.wap-link {
+  color: $secondary;
+  cursor: pointer;
+  outline: 0;
+  text-decoration: underline;
+}
+
+/* TEXT -------------------------------------------------------------------- */
+
+.text-monospace {
+  font-family: monospace;
+}
+
+/* CUSTOM STYLE --------------------------------------------------------------- */
+
+.bg-gmi-dark {
+  background-color: $gmi-dark;
+}
+
+.bg-gmi-dark-light {
+  background-color: $gmi-dark-light;
+}
+
+.bg-gmi-dark-darker {
+  background-color: $gmi-dark-darker;
+}
+.input-text {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+html, body {
+  background: #000000;
+  height: 100%;
+  overflow: auto !important;
+  width: 100%;
+}
+
+:root {
+
+  --color-1: #2e2e2e;
+  --color-10: #28f2ff;
+  --color-11: #c4c4c4;
+  --color-12: #28ff7e;
+  --color-2: #101010;
+  --color-3: #1b1b1b;
+  --color-4: #dedede;
+  --color-5: #9e9e9e;
+  --color-6: #b9b9b9;
+  --color-7: #e1ff28;
+  --color-8: #f22fb0;
+  --color-9: #93ab01;
+
+  * {
+    color: var(--color-4);
+    font-family: Titillium Web;
+  }
+
+  .button {
+    backdrop-filter: none;
+    background: var(--color-7);
+    border: none;
+    color: var(--color-3);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 1;
+    outline: 0 !important;
+    padding: 1rem 3rem;
+    text-align: center;
+  }
+
+  .icon-button {
+    padding: 1rem;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .loader-custom {
+    --background: var(--color-1);
+
+    ion-backdrop {
+      cursor: pointer;
+    }
+  }
+
+}

@@ -1,0 +1,55 @@
+<div>
+    <div class="close-container row end mb-5">
+        <button (click)="close()" class="cross-btn">
+            <img src="/assets/icons/close.svg">
+        </button>
+    </div>
+    <div class="row mt-5 mb-5 center">
+        <h5 (click)="close()" class="home-btn cursor-pointer" routerLink="/" routerLinkActive="router-link-active">
+            Home</h5>
+    </div>
+    <div class="row mt-5 mb-5 center">
+        <h5 (click)="scrollToMobileChallenges()"
+            [routerLink]="[linkHome ? '/' : '/challenges' ]"
+            class="home-btn cursor-pointer">Challenges</h5>
+    </div>
+
+    <div class="row mt-5 mb-5 center">
+        <h5 class="home-btn cursor-pointer"
+            openWalletDetailModal
+            routerLink="/the-proyect"
+            routerLinkActive="router-link-active">The project</h5>
+    </div>
+    <div class="row mt-5 mb-5 center">
+        <h5 (click)="close()"
+            class="home-btn cursor-pointer"
+            routerLink="/about-us"
+            routerLinkActive="router-link-active">About Us</h5>
+    </div>
+
+    <div class="row mt-5 mb-5 center">
+        <h5 (click)="close()" class="home-btn cursor-pointer" routerLink="/blog" routerLinkActive="router-link-active">
+            Blog</h5>
+    </div>
+
+    <div class="row mt-5 center">
+        <button (click)="openWalletListModal()"
+                *ngIf="!gmiWallets.connectedWallet"
+                class="btn-custom cursor-pointer f-right">
+            <img src="/assets/images/header-play-button.svg">
+        </button>
+
+        <button (click)="openWalletDetailModal()"
+                *ngIf="gmiWallets.connectedWallet"
+                class="wallet-btn btn-custom cursor-pointer f-right">
+            <div class="title">Connected at</div>
+            <img [src]="gmiWallets.connectedWallet.icon | safeUrl" class="image">
+        </button>
+
+    </div>
+</div>
+
+<app-modal #walletDetail
+           [componentProps]="{wallet: gmiWallets.connectedWallet}"
+           [component]="WalletDetailComponent"></app-modal>
+<app-modal #walletListModal [componentProps]="{showDetailOnConnect:true}" [component]="WalletListComponent"></app-modal>

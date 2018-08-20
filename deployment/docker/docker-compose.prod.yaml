@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+  db:
+    image: arangodb
+    volumes:
+      - ${ARANGODB_DATABASE_PATH}:/var/lib/arangodb3
+      - ${ARANGODB_DATABASE_APPS_PATH}:/var/lib/arangodb3-apps
+    environment:
+      - ARANGO_ROOT_PASSWORD=${ARANGODB_ROOT_PASSWORD}
+    ports:
+      - "8529:8529"
+    networks:
+      gmi-net:
+        aliases:
+          - db
+
+  api-server:
+    image: gmi-api-server:latest
+    restart: always
+    depends_on:
+      - db
+    environment:
+      - CONFIG_PATH=/usr/src/gmi/config.toml
+    volumes:
+      - ${CONFIG_TOML_PATH}:/usr/src/gmi/config.toml
+    ports:
+      - "3003:3003"
+    networks:
+      gmi-net:
+        aliases:
+          - api_server
+
+  nginx:
+    image: nginx:latest
+    depends_on:
+      - api-server
+    volumes:
+      - ${NGINX_FOLDER_PATH}/certs:/etc/nginx/certs
+      - ${NGINX_FOLDER_PATH}/nginx.conf:/etc/nginx/nginx.conf
+    environment:
+      - NGINX_HOST=${HOST}
+      - NGINX_PORT=443
+    ports:
+      - "443:443"
+    networks:
+      gmi-net:
+        aliases:
+          - nginx
+
+networks:
+  gmi-net:

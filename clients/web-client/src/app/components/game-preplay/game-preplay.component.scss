@@ -1,0 +1,121 @@
+.notmobile {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.root-container {
+  align-items: flex-start;
+  display: flex;
+  max-width: 44rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.avatar-container {
+  margin-right: 1rem;
+
+  > .avatar {
+    max-width: 13rem;
+  }
+}
+
+.description {
+  margin: 1.5rem auto;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.details-container {
+  align-items: center;
+  display: flex;
+  opacity: 0.8;
+  margin-bottom: 2.5rem;
+}
+
+.button {
+  padding: 0.6rem 5rem;
+}
+
+.cost-detail {
+  opacity: 0.8;
+  font-size: 0.7rem;
+}
+
+.user-id-container, .admission-feed-container {
+  opacity: 0.8;
+  padding: 0.5rem 1rem;
+
+  .title {
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .subtitle {
+    color: white;
+    font-weight: 600;
+  }
+}
+
+.user-id-container {
+  background: rgba(255, 255, 255, 0.2);
+  max-height: 61px;
+  min-width: 16rem;
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .root-container {
+    padding-left: 0rem;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .notmobile {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .root-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0rem;
+  }
+
+  .avatar-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .right-content-container {
+
+    > * {
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+
+  .details-container {
+    > .user-id-container {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+}

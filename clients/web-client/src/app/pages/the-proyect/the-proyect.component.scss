@@ -1,0 +1,146 @@
+.root-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  > * {
+    width: 100%;
+  }
+}
+
+app-header {
+  display: block;;
+}
+
+.root {
+  background: var(--color-3);
+  flex-grow: 1;
+  position: relative;
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  > .bottom-background {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+.bottom-background {
+
+  left: 0;
+  top: 0;
+
+  > * {
+    display: block;
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .b-container {
+    bottom: 0;
+    height: initial;
+    height: initial;
+    left: 0;
+    mix-blend-mode: overlay;
+    top: initial;
+
+    > img {
+      display: block;
+      max-height: 30rem;
+      width: auto;
+    }
+  }
+}
+
+.main-content {
+  margin: auto;
+  max-width: 80rem;
+  padding: 4rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+  width: calc(50% - 2.5rem);
+
+  > .title {
+    color: var(--color-12);
+    font-family: "CHANEY";
+    font-size: 3.3rem;
+    font-weight: 300;
+    margin: 1rem 0;
+    text-transform: uppercase;
+  }
+
+  > .subtitle {
+    color: white;
+    font-size: 1.0rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  &.part2 {
+
+    margin-left: auto;
+    margin-top: 2rem;
+
+    > .title {
+      color: white;
+      font-family: "Titillium Web";
+      font-size: 1rem;
+      text-transform: initial;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .main-content {
+    padding: 2rem;
+  }
+
+  .section {
+
+    &.part1 {
+      > .title {
+        font-size: 2.85rem;
+        line-height: 3.1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .main-content {
+    padding: 2rem;
+  }
+
+  .section {
+    width: 100%;
+
+    &.part1 {
+      > .title {
+        font-size: 2.2rem;
+        line-height: 2.65rem;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .main-content {
+    padding: 1.5rem;
+  }
+
+}

@@ -1,0 +1,35 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+    <button (click)="close()" aria-label="Close" class="close" type="button">
+        <img src="/assets/icons/close.svg"/>
+    </button>
+
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-center mt-4 text-white">Waiting List</h3>
+
+        </div>
+    </div>
+    <!-- installed avaliable  -->
+    <div class="row main-content-text">
+        <p class="main-p text-center">
+            Dear pioneer user, gmiDAO is working to bring the alpha<br>
+            from goingmakeit.app to market as soon as possible.<br>
+            Join the list and youwill be the first to enter 🔥 </p>
+    </div>
+    <div>
+        <span class="subscribe" style="display: flex; justify-content: space-between; width: 100%">
+        <input [(ngModel)]="email"
+               class="input-text"
+               name="email"
+               placeholder="EMAIL"
+               required="true"
+               style="width: 100%"
+               type="email"/>
+        <button class="subscribebtn f-right" type="submit">
+          I'm in
+          <img src="/assets/icons/arrow-right.svg"/>
+        </button>
+
+        </span>
+    </div>
+</form>

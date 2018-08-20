@@ -1,0 +1,107 @@
+.root-container {
+  background: var(--color-3);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  > * {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .bottom-background {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+app-footer {
+  margin-top: auto;
+}
+
+.bottom-background {
+
+  left: 0;
+  top: 0;
+
+  > * {
+    display: block;
+    height: 100%;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  > .b-container {
+    bottom: 0;
+    height: initial;
+    height: initial;
+    mix-blend-mode: overlay;
+    top: initial;
+
+    > img {
+      display: block;
+      margin-left: auto;
+      max-height: 30rem;
+      width: auto;
+    }
+  }
+}
+
+.main-content {
+  margin: 0rem auto;
+  max-width: 77rem;
+  padding: 6rem 2rem;
+  min-height: calc(100vh - 144px - 102px);
+
+  > .title {
+    color: var(--color-10);
+    font-family: "CHANEY";
+    font-size: 3.3rem;
+    margin: 1rem auto;
+    text-transform: uppercase;
+  }
+}
+
+.faqs-container {
+  margin: auto;
+  max-width: 750px;
+
+  .faq {
+    border-bottom: solid 1px #dedede;
+
+    .question {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: center;
+      padding: 24px 22px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 32px;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .answer {
+      padding: 0 22px 24px;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+    }
+
+    &.opened .chevron {
+      transform: rotate(180deg);
+    }
+  }
+}

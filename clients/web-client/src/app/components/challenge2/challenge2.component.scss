@@ -1,0 +1,115 @@
+.root {
+
+  align-items: center;
+  background: var(--color-1);
+  border-radius: 0.2rem;
+  display: flex;
+  flex-wrap: nowrap;
+
+  height: 100%;
+  min-height: 100%;
+  overflow: visible;
+  padding: 2rem;
+
+  > .avatar-container {
+    margin: auto 0rem;
+    margin-right: 1rem;
+    min-height: 10rem;
+    min-width: 18rem;
+    position: relative;
+
+    > .avatar {
+      position: absolute;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  min-width: 320px;
+
+  > .top-part {
+    display: flex;
+    margin-bottom: 1rem;
+    overflow: visible;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.challenge-avatar-container {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+
+.challenge-avatar {
+  border-radius: 100%;
+  height: 3.5rem;
+  margin-right: 1.2rem;
+  width: auto;
+}
+
+.challenge-title-container {
+
+  > .challenge-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  > .challenge-date {
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+    opacity: 0.8;
+  }
+}
+
+.challenge-description {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.main-content {
+}
+
+.bottom-part {
+  align-items: center;
+  display: flex;
+  margin-top: auto;
+  padding-top: 1rem;
+  width: 100%;
+
+  > .button {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 995px) {
+
+}
+
+@media screen and (max-width: 767px) {
+  .root {
+    display: block;
+    padding: 1.5rem 0.5rem;
+
+    > .avatar-container {
+      margin-left: 12.5%;
+      min-height: 5rem;
+      min-width: initial;
+
+      > .avatar {
+        display: block;
+        height: 7rem;
+        margin: auto;
+        margin-bottom: 2rem;
+        margin-top: -4rem;
+      }
+    }
+  }
+}
+
+
