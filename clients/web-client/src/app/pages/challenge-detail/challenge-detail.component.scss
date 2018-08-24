@@ -12,16 +12,16 @@
   max-width: 30rem;
 }
 
-// .section {
-//   align-items: center;
-//   display: flex;
-//   justify-content: space-between;
-//   margin: 4rem auto;
-//   padding: 2rem;
+.section {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem auto;
+  padding: 2rem;
 
-//   > *:first-child {
-//     margin-right: 3rem;
-//   }
+  > *:first-child {
+    margin-right: 3rem;
+  }
 
   .title {
     color: var(--color-8);

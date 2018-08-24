@@ -18,9 +18,9 @@ const routes: Routes = [{
 }];
 
 @NgModule({
-    declarations: [ChallengeDetailComponent],
-    imports: [CommonModule, ChallengeModule, HeaderModule, FooterModule, FormsModule, ModalModule, GamePreplayModule,
-        PipesModule, RouterModule.forChild(routes)],
-})
+//     declarations: [ChallengeDetailComponent],
+//     imports: [CommonModule, ChallengeModule, HeaderModule, FooterModule, FormsModule, ModalModule, GamePreplayModule,
+//         PipesModule, RouterModule.forChild(routes)],
+// })
 export class ChallengeDetailModule {
 }
