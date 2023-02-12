@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@intlify/vue-i18n-loader": "^3.0.0",
-    "@quasar/app": "^3.1.0",
+    "@quasar/app": "^3.3.3",
     "@types/node": "^15.14.9",
     "dotenv": "^10.0.0",
     "node-polyfill-webpack-plugin": "^1.1.4"
